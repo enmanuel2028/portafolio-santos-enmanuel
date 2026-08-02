@@ -3,17 +3,6 @@ import type { LabEntry } from "@/types/content";
 /** Áreas de exploración activa mostradas en la sección Technology Lab. */
 export const labEntries: LabEntry[] = [
   {
-    id: "local-models",
-    command: "ollama run qwen-coder",
-    title: { es: "Modelos locales", en: "Local models" },
-    description: {
-      es: "Ejecución de modelos de lenguaje en hardware propio, ajustando contexto y midiendo consumo de GPU frente a la alternativa en la nube.",
-      en: "Running language models on own hardware, tuning context and measuring GPU usage against the cloud alternative.",
-    },
-    status: "active",
-    tags: ["Ollama", "Qwen Coder", "GPU"],
-  },
-  {
     id: "computer-vision",
     command: "train --arch maskrcnn --backbone mobilenetv3",
     title: { es: "Visión por computador", en: "Computer vision" },
