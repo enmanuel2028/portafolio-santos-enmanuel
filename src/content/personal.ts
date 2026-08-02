@@ -36,7 +36,8 @@ export type PersonalLinkKey = keyof PersonalLinks;
 
 /** Dominio canónico de producción. Cambiar antes del despliegue. */
 export const siteUrl =
-  process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") ?? "https://santosenmanuel.dev";
+  process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") ??
+  "https://portafolio-santos-enmanuel.manosalvaaceros.workers.dev";
 
 export const personal = {
   firstName: "Santos",
