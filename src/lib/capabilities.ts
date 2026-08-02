@@ -9,7 +9,7 @@
 
 export type QualityTier = "high" | "medium" | "low";
 
-const STORAGE_KEY = "se-portfolio-effects";
+const STORAGE_KEY = "se-portfolio-effects-v2";
 
 /* ── WebGL probe ─────────────────────────────────────────────────────────── */
 
