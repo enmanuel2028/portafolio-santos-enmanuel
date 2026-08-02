@@ -72,8 +72,8 @@ export function Hero({ locale, dict }: HeroProps) {
         aria-hidden="true"
       />
 
-      <div className="container-page relative z-10 py-20">
-        <div className="flex max-w-3xl flex-col gap-7">
+      <div className="container-page relative z-10 py-10 sm:py-20">
+        <div className="flex max-w-3xl flex-col gap-5 sm:gap-7">
           <p
             data-hero-fade
             className="mono-label flex flex-wrap items-center gap-x-3 gap-y-2 opacity-0"
@@ -124,7 +124,7 @@ export function Hero({ locale, dict }: HeroProps) {
 
           <p
             data-hero-fade
-            className="max-w-xl text-base leading-relaxed text-[var(--color-muted)] opacity-0"
+            className="relative max-w-xl rounded-r-xl border-l-2 border-[var(--color-electric)] bg-gradient-to-r from-[rgba(56,189,248,.12)] via-[rgba(56,189,248,.04)] to-transparent px-4 py-3 text-[0.95rem] leading-7 font-medium text-[var(--color-ink)] opacity-0 shadow-[inset_0_1px_0_rgba(255,255,255,.04)] sm:rounded-none sm:bg-none sm:px-5 sm:py-1 sm:text-base sm:font-normal sm:text-[var(--color-muted)] sm:shadow-none"
           >
             {personal.intro[locale]}
           </p>

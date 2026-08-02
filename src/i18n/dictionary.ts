@@ -151,6 +151,8 @@ export const dictionary = {
         "Los canales de contacto se activarán en cuanto se configuren los enlaces correspondientes.",
     },
     footer: {
+      contactEyebrow: "Contacto directo",
+      navigation: "Navegación",
       credit: "Diseñado y desarrollado por Santos Enmanuel.",
       built:
         "Construido con React, TypeScript, animación web y mucha atención a los detalles.",
@@ -309,6 +311,8 @@ export const dictionary = {
       pending: "Contact channels will appear as soon as the corresponding links are configured.",
     },
     footer: {
+      contactEyebrow: "Direct contact",
+      navigation: "Navigation",
       credit: "Designed and developed by Santos Enmanuel.",
       built: "Built with React, TypeScript, web animation and a lot of attention to detail.",
       rights: "All rights reserved.",
