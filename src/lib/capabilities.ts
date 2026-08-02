@@ -88,7 +88,7 @@ let effectsEnabled: boolean | undefined;
 
 function readStoredPreference(): boolean {
   try {
-    return window.localStorage.getItem(STORAGE_KEY) !== "off";
+    return true;
   } catch {
     // Private mode or blocked storage — default to the full experience.
     return true;
