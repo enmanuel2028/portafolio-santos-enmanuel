@@ -38,10 +38,23 @@ export function Navbar({ locale, dict, spy = true }: NavbarProps) {
   // Lock background scroll while the mobile sheet is open.
   useEffect(() => {
     if (!menuOpen) return;
-    const previous = document.body.style.overflow;
+    const scrollY = window.scrollY;
+    const previous = {
+      overflow: document.body.style.overflow,
+      position: document.body.style.position,
+      top: document.body.style.top,
+      width: document.body.style.width,
+    };
     document.body.style.overflow = "hidden";
+    document.body.style.position = "fixed";
+    document.body.style.top = `-${scrollY}px`;
+    document.body.style.width = "100%";
     return () => {
-      document.body.style.overflow = previous;
+      document.body.style.overflow = previous.overflow;
+      document.body.style.position = previous.position;
+      document.body.style.top = previous.top;
+      document.body.style.width = previous.width;
+      window.scrollTo(0, scrollY);
     };
   }, [menuOpen]);
 
@@ -193,7 +206,7 @@ function MobileMenu({ items, dict, active, onClose }: MobileMenuProps) {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: duration.micro, ease: ease.out }}
-      className="fixed inset-0 z-50 bg-[var(--color-void)]/97 backdrop-blur-xl lg:hidden"
+      className="fixed inset-0 z-[80] isolate h-[100dvh] overflow-y-auto overscroll-contain bg-[#05070d] lg:hidden"
     >
       <div className="container-page flex items-center justify-between" style={{ height: "var(--nav-height)" }}>
         <span className="font-[family-name:var(--font-mono)] text-xs tracking-[0.22em] text-[var(--color-muted)]">

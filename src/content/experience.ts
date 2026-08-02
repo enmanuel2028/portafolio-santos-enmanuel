@@ -90,20 +90,6 @@ export const timeline: TimelineEntry[] = [
     tags: ["Cloudflare Pages", "UI/UX", "Freelance"],
   },
   {
-    id: "ia-local",
-    period: { es: "Exploración continua", en: "Ongoing exploration" },
-    title: {
-      es: "Inteligencia artificial local",
-      en: "Local artificial intelligence",
-    },
-    description: {
-      es: "Evaluación de modelos y asistentes de código ejecutados en hardware propio, midiendo consumo de recursos y comparándolos con servicios en la nube.",
-      en: "Evaluation of models and coding assistants running on own hardware, measuring resource usage and comparing them against cloud services.",
-    },
-    tags: ["Ollama", "Qwen Coder", "OpenCode"],
-    ongoing: true,
-  },
-  {
     id: "practicas",
     period: { es: "Siguiente paso", en: "Next step" },
     title: {

@@ -51,7 +51,7 @@ export const dictionary = {
       eyebrow: "Showreel",
       title: "De la carretera al modelo, del documento al dashboard",
       description:
-        "Cuatro dominios distintos, un mismo recorrido: capturar el problema, estructurarlo y devolverlo como algo que se puede leer y decidir.",
+        "Tres dominios distintos, un mismo recorrido: capturar el problema, estructurarlo y devolverlo como algo que se puede leer y decidir.",
       steps: {
         road: {
           title: "Detección en vía",
@@ -65,17 +65,13 @@ export const dictionary = {
           title: "Capa analítica",
           description: "Los datos preparados se agregan en indicadores por rol.",
         },
-        terminal: {
-          title: "Entorno propio",
-          description: "Modelos y herramientas ejecutándose en hardware local.",
-        },
       },
     },
     projects: {
       eyebrow: "Trabajo seleccionado",
       title: "Proyectos",
       description:
-        "Siete proyectos donde el software, los modelos y los datos resuelven un problema concreto.",
+        "Seis proyectos donde el software, los modelos y los datos resuelven un problema concreto.",
       viewCase: "Ver caso",
       viewAll: "Ver todos los proyectos",
       featured: "Proyecto destacado",
@@ -83,6 +79,9 @@ export const dictionary = {
       confidentialNote:
         "Caso presentado con información limitada por confidencialidad.",
       inProgress: "En desarrollo",
+      completed: "Finalizado",
+      ownProject: "Proyecto propio",
+      collaboration: "Participación profesional",
       problem: "Problema",
       solution: "Solución",
       contribution: "Mi aporte",
@@ -152,6 +151,8 @@ export const dictionary = {
         "Los canales de contacto se activarán en cuanto se configuren los enlaces correspondientes.",
     },
     footer: {
+      contactEyebrow: "Contacto directo",
+      navigation: "Navegación",
       credit: "Diseñado y desarrollado por Santos Enmanuel.",
       built:
         "Construido con React, TypeScript, animación web y mucha atención a los detalles.",
@@ -214,7 +215,7 @@ export const dictionary = {
       eyebrow: "Showreel",
       title: "From road to model, from document to dashboard",
       description:
-        "Four different domains, one same path: capture the problem, structure it and return it as something you can read and decide on.",
+        "Three different domains, one shared path: capture the problem, structure it and return it as something you can read and decide on.",
       steps: {
         road: {
           title: "Road detection",
@@ -228,23 +229,22 @@ export const dictionary = {
           title: "Analytics layer",
           description: "Prepared data aggregates into role-specific indicators.",
         },
-        terminal: {
-          title: "Own environment",
-          description: "Models and tools running on local hardware.",
-        },
       },
     },
     projects: {
       eyebrow: "Selected work",
       title: "Projects",
       description:
-        "Seven projects where software, models and data solve a concrete problem.",
+        "Six projects where software, models and data solve a concrete problem.",
       viewCase: "View case",
       viewAll: "View all projects",
       featured: "Featured project",
       confidential: "Confidential case",
       confidentialNote: "Case presented with limited information due to confidentiality.",
       inProgress: "In progress",
+      completed: "Completed",
+      ownProject: "Own project",
+      collaboration: "Professional contribution",
       problem: "Problem",
       solution: "Solution",
       contribution: "My contribution",
@@ -311,6 +311,8 @@ export const dictionary = {
       pending: "Contact channels will appear as soon as the corresponding links are configured.",
     },
     footer: {
+      contactEyebrow: "Direct contact",
+      navigation: "Navigation",
       credit: "Designed and developed by Santos Enmanuel.",
       built: "Built with React, TypeScript, web animation and a lot of attention to detail.",
       rights: "All rights reserved.",

@@ -78,6 +78,12 @@ export interface Project extends ProjectLink {
   };
   /** Hides links/details that cannot be published. */
   confidential?: boolean;
+  /** Clarifies whether this is an own product or work contributed to for someone else. */
+  ownership?: "own" | "collaboration";
+  /** Explicit delivery state when it is important to the case study. */
+  status?: "ongoing" | "completed";
+  /** Project-specific explanation when no public demo or repository exists. */
+  linksNote?: L<string>;
   featured: boolean;
 }
 

@@ -1,16 +1,6 @@
 import type { L } from "@/types/content";
 
-/**
- * ─────────────────────────────────────────────────────────────────────────────
- *  PLACEHOLDERS — reemplazar con datos reales
- * ─────────────────────────────────────────────────────────────────────────────
- *  Los valores vacíos ("") son intencionales. La UI **oculta automáticamente**
- *  cualquier botón o enlace cuyo valor esté vacío, de modo que nunca se publica
- *  un enlace roto ni un dato inventado.
- *
- *  Para activar un canal de contacto, basta con rellenar su cadena aquí.
- *  Ver `PROJECT_STATUS.md` para la lista completa de pendientes.
- */
+/** Confirmed public contact channels. Empty values stay hidden by the UI. */
 export interface PersonalLinks {
   /** Ej: "santos@ejemplo.com" */
   email: string;
@@ -25,10 +15,10 @@ export interface PersonalLinks {
 }
 
 export const personalLinks: PersonalLinks = {
-  email: "",
+  email: "manosalvaaceros@gmail.com",
   linkedin: "",
-  github: "",
-  whatsapp: "",
+  github: "https://github.com/enmanuel2028",
+  whatsapp: "https://wa.me/573143741554",
   cv: "",
 };
 

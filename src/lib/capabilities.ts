@@ -9,7 +9,7 @@
 
 export type QualityTier = "high" | "medium" | "low";
 
-const STORAGE_KEY = "se-portfolio-effects";
+const STORAGE_KEY = "se-portfolio-effects-v2";
 
 /* ── WebGL probe ─────────────────────────────────────────────────────────── */
 
@@ -88,7 +88,7 @@ let effectsEnabled: boolean | undefined;
 
 function readStoredPreference(): boolean {
   try {
-    return window.localStorage.getItem(STORAGE_KEY) !== "off";
+    return true;
   } catch {
     // Private mode or blocked storage — default to the full experience.
     return true;

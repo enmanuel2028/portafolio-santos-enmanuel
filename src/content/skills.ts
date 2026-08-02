@@ -64,7 +64,6 @@ export const skillGroups: SkillGroup[] = [
       "Procesamiento documental con IA",
       "Gemini",
       "Modelos de lenguaje",
-      "IA local",
       "Evaluación de modelos",
     ],
   },

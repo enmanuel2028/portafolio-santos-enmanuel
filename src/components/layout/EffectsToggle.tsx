@@ -10,11 +10,11 @@ import { cn } from "@/lib/utils";
  * long scroll journeys — independently of their OS motion preference.
  */
 export function EffectsToggle({ dict }: { dict: Dictionary }) {
-  const { effectsEnabled, toggleEffects, prefersReducedMotion } = useExperience();
+  const { effectsEnabled, toggleEffects } = useExperience();
 
-  // With reduced motion at OS level the toggle cannot re-enable effects,
-  // so it is presented as disabled rather than silently doing nothing.
-  const locked = prefersReducedMotion;
+  // Keep the control available even when the browser reports reduced motion;
+  // this visitor can explicitly choose the portfolio's full experience.
+  const locked = false;
 
   return (
     <button

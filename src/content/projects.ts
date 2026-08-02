@@ -9,7 +9,7 @@ export const projectCategories: { id: ProjectCategoryId; label: L<string> }[] = 
   { id: "game", label: { es: "Videojuegos", en: "Games" } },
 ];
 
-export const projects: Project[] = [
+const projectCatalog: Project[] = [
   // ───────────────────────────────────────────────────────────── 01 · VialAI
   {
     slug: "vialai",
@@ -18,6 +18,7 @@ export const projects: Project[] = [
     accent: "detection",
     visual: "road-scan",
     featured: true,
+    ownership: "own",
     category: ["ai", "computer-vision", "architecture"],
     role: {
       es: "Desarrollo de plataforma y modelos de visión",
@@ -237,6 +238,7 @@ export const projects: Project[] = [
     accent: "intelligence",
     visual: "document-pipeline",
     featured: true,
+    ownership: "collaboration",
     category: ["ai", "data", "architecture"],
     role: {
       es: "Arquitectura, pipeline de procesamiento y dashboard",
@@ -431,6 +433,7 @@ export const projects: Project[] = [
     visual: "signal-board",
     featured: true,
     confidential: true,
+    ownership: "collaboration",
     category: ["ai", "data"],
     role: {
       es: "Analítica de producto y dashboards por rol",
@@ -606,6 +609,7 @@ export const projects: Project[] = [
     accent: "hydraulic",
     visual: "well-strata",
     featured: true,
+    status: "ongoing",
     category: ["architecture", "data"],
     role: {
       es: "Arquitectura cliente-servidor y backend",
@@ -767,6 +771,7 @@ export const projects: Project[] = [
     accent: "craft",
     visual: "qr-cards",
     featured: true,
+    status: "completed",
     category: ["web"],
     role: {
       es: "Diseño, desarrollo y despliegue",
@@ -923,6 +928,11 @@ export const projects: Project[] = [
     accent: "arcade",
     visual: "pixel-arena",
     featured: true,
+    status: "ongoing",
+    linksNote: {
+      es: "Repositorio aún no creado; el proyecto continúa en desarrollo.",
+      en: "Repository not created yet; the project is still in development.",
+    },
     category: ["game"],
     role: {
       es: "Desarrollo en equipo",
@@ -1232,6 +1242,12 @@ export const projects: Project[] = [
     },
   },
 ];
+
+// This experimental local-AI entry is intentionally excluded from the public
+// portfolio. Keeping the archived draft here avoids losing its research notes.
+export const projects = projectCatalog.filter(
+  (project) => project.slug !== "entorno-ia-local",
+);
 
 export const featuredProjects = projects.filter((project) => project.featured);
 
