@@ -28,12 +28,12 @@ export async function generateMetadata({
   if (!project) return { title: "404" };
 
   return {
-    title: project.name,
+    title: project.name[locale],
     description: project.summary[locale],
     alternates: { canonical: `${siteUrl}/${locale}/projects/${slug}` },
     openGraph: {
       type: "article",
-      title: `${project.name} — ${personal.fullName}`,
+      title: `${project.name[locale]} — ${personal.fullName}`,
       description: project.summary[locale],
       url: `${siteUrl}/${locale}/projects/${slug}`,
     },
@@ -95,7 +95,7 @@ export default async function ProjectPage({
             </div>
 
             <h1 className="text-gradient max-w-4xl font-[family-name:var(--font-display)] text-4xl leading-[1.03] sm:text-6xl lg:text-7xl">
-              {project.name}
+              {project.name[locale]}
             </h1>
 
             <p className="max-w-2xl text-lg leading-relaxed text-[var(--color-ink)]/90">
@@ -258,7 +258,7 @@ export default async function ProjectPage({
             <Link href={`/${locale}/projects/${next.slug}`} className="group flex flex-col gap-2">
               <span className="mono-label">{dict.caseStudy.nextProject}</span>
               <span className="flex items-center gap-3 font-[family-name:var(--font-display)] text-3xl transition-colors group-hover:text-[var(--accent)] sm:text-4xl">
-                {next.name}
+                {next.name[locale]}
                 <ArrowRight
                   className="h-6 w-6 transition-transform duration-200 group-hover:translate-x-1"
                   aria-hidden="true"
