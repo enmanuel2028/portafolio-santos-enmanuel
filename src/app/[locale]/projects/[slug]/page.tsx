@@ -159,7 +159,7 @@ export default async function ProjectPage({
               <p className="font-[family-name:var(--font-mono)] text-[0.7rem] text-[var(--color-faint)]">
                 {project.confidential
                   ? dict.projects.confidentialNote
-                  : dict.projects.linksPending}
+                  : project.linksNote?.[locale] ?? dict.projects.linksPending}
               </p>
             )}
           </div>

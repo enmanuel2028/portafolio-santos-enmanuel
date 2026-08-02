@@ -51,7 +51,7 @@ export const dictionary = {
       eyebrow: "Showreel",
       title: "De la carretera al modelo, del documento al dashboard",
       description:
-        "Cuatro dominios distintos, un mismo recorrido: capturar el problema, estructurarlo y devolverlo como algo que se puede leer y decidir.",
+        "Tres dominios distintos, un mismo recorrido: capturar el problema, estructurarlo y devolverlo como algo que se puede leer y decidir.",
       steps: {
         road: {
           title: "Detección en vía",
@@ -64,10 +64,6 @@ export const dictionary = {
         dashboard: {
           title: "Capa analítica",
           description: "Los datos preparados se agregan en indicadores por rol.",
-        },
-        terminal: {
-          title: "Entorno propio",
-          description: "Modelos y herramientas ejecutándose en hardware local.",
         },
       },
     },
@@ -217,7 +213,7 @@ export const dictionary = {
       eyebrow: "Showreel",
       title: "From road to model, from document to dashboard",
       description:
-        "Four different domains, one same path: capture the problem, structure it and return it as something you can read and decide on.",
+        "Three different domains, one shared path: capture the problem, structure it and return it as something you can read and decide on.",
       steps: {
         road: {
           title: "Road detection",
@@ -230,10 +226,6 @@ export const dictionary = {
         dashboard: {
           title: "Analytics layer",
           description: "Prepared data aggregates into role-specific indicators.",
-        },
-        terminal: {
-          title: "Own environment",
-          description: "Models and tools running on local hardware.",
         },
       },
     },

@@ -8,7 +8,6 @@ import { gsap, ScrollTrigger } from "@/lib/gsap";
 import { RoadStage } from "@/components/showreel/RoadStage";
 import { PipelineStage } from "@/components/showreel/PipelineStage";
 import { DashboardStage } from "@/components/showreel/DashboardStage";
-import { TerminalStage } from "@/components/showreel/TerminalStage";
 
 interface ShowreelProps {
   dict: Dictionary;
@@ -56,7 +55,7 @@ export function Showreel({ dict }: ShowreelProps) {
               trigger: root.current,
               start: "top top",
               // Shorter journey on phones so the pin never overstays.
-              end: isDesktop ? "+=320%" : "+=180%",
+              end: isDesktop ? "+=240%" : "+=140%",
               pin: true,
               scrub: 0.6,
               anticipatePin: 1,
@@ -74,7 +73,7 @@ export function Showreel({ dict }: ShowreelProps) {
           }
           if (progress?.[0]) {
             gsap.set(progress[0], { scaleY: 0, transformOrigin: "top" });
-            timeline.to(progress[0], { scaleY: 1, duration: 3, ease: "none" }, 0);
+            timeline.to(progress[0], { scaleY: 1, duration: stages.length - 1, ease: "none" }, 0);
           }
 
           stages.forEach((stage, index) => {
@@ -131,7 +130,6 @@ export function Showreel({ dict }: ShowreelProps) {
     { key: "road", copy: dict.showreel.steps.road, Stage: RoadStage },
     { key: "pipeline", copy: dict.showreel.steps.pipeline, Stage: PipelineStage },
     { key: "dashboard", copy: dict.showreel.steps.dashboard, Stage: DashboardStage },
-    { key: "terminal", copy: dict.showreel.steps.terminal, Stage: TerminalStage },
   ] as const;
 
   // ── Reduced motion / low tier: a readable stacked list ───────────────────
@@ -226,7 +224,7 @@ export function Showreel({ dict }: ShowreelProps) {
                 <span className="size-1.5 rounded-full bg-white/10" />
               </div>
               <span className="font-[family-name:var(--font-mono)] text-[0.6rem] uppercase tracking-[0.22em] text-[var(--color-muted)]">
-                {dict.showreel.eyebrow} / 04
+                {dict.showreel.eyebrow} / {String(steps.length).padStart(2, "0")}
               </span>
             </div>
 

@@ -928,6 +928,11 @@ const projectCatalog: Project[] = [
     accent: "arcade",
     visual: "pixel-arena",
     featured: true,
+    status: "ongoing",
+    linksNote: {
+      es: "Repositorio aún no creado; el proyecto continúa en desarrollo.",
+      en: "Repository not created yet; the project is still in development.",
+    },
     category: ["game"],
     role: {
       es: "Desarrollo en equipo",

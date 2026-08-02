@@ -82,6 +82,8 @@ export interface Project extends ProjectLink {
   ownership?: "own" | "collaboration";
   /** Explicit delivery state when it is important to the case study. */
   status?: "ongoing" | "completed";
+  /** Project-specific explanation when no public demo or repository exists. */
+  linksNote?: L<string>;
   featured: boolean;
 }
 
