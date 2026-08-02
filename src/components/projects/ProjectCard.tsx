@@ -45,7 +45,7 @@ export function ProjectCard({ project, locale, dict, reversed = false }: Project
       <Link
         href={`/${locale}/projects/${project.slug}`}
         data-cursor-label={dict.projects.viewCase}
-        aria-label={`${dict.projects.viewCase}: ${project.name}`}
+        aria-label={`${dict.projects.viewCase}: ${project.name[locale]}`}
         className={cn(
           "relative block aspect-[4/3] overflow-hidden rounded-2xl border border-[var(--color-line)] transition-colors duration-300 hover:border-[var(--accent)]/45 sm:aspect-[16/10]",
           reversed && "lg:order-2",
@@ -86,7 +86,7 @@ export function ProjectCard({ project, locale, dict, reversed = false }: Project
               href={`/${locale}/projects/${project.slug}`}
               className="transition-colors hover:text-[var(--accent)]"
             >
-              {project.name}
+              {project.name[locale]}
             </Link>
           </h3>
 

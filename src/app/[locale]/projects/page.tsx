@@ -83,7 +83,7 @@ export default async function ProjectsIndexPage({
                   <p className="mono-label">{project.role[locale]}</p>
 
                   <h2 className="font-[family-name:var(--font-display)] text-2xl transition-colors group-hover:text-[var(--accent)]">
-                    {project.name}
+                    {project.name[locale]}
                   </h2>
 
                   <p className="flex-1 text-sm leading-relaxed text-[var(--color-muted)]">

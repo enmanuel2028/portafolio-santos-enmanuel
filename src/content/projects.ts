@@ -14,7 +14,7 @@ export const projects: Project[] = [
   {
     slug: "vialai",
     index: "01",
-    name: "VialAI",
+    name: { es: "VialAI", en: "VialAI" },
     accent: "detection",
     visual: "road-scan",
     featured: true,
@@ -230,7 +230,10 @@ export const projects: Project[] = [
   {
     slug: "vigilancia-tecnologica",
     index: "02",
-    name: "Plataforma de vigilancia tecnológica y regulatoria",
+    name: {
+      es: "Plataforma de vigilancia tecnológica y regulatoria",
+      en: "Technology and regulatory intelligence platform",
+    },
     accent: "intelligence",
     visual: "document-pipeline",
     featured: true,
@@ -420,7 +423,10 @@ export const projects: Project[] = [
   {
     slug: "analitica-entrenamiento-ventas",
     index: "03",
-    name: "Analítica para plataforma de entrenamiento de ventas",
+    name: {
+      es: "Analítica para plataforma de entrenamiento de ventas",
+      en: "Analytics for a sales training platform",
+    },
     accent: "analytics",
     visual: "signal-board",
     featured: true,
@@ -596,7 +602,7 @@ export const projects: Project[] = [
   {
     slug: "simulador-hidraulico",
     index: "04",
-    name: "Simulador hidráulico de pozos",
+    name: { es: "Simulador hidráulico de pozos", en: "Hydraulic well simulator" },
     accent: "hydraulic",
     visual: "well-strata",
     featured: true,
@@ -754,7 +760,10 @@ export const projects: Project[] = [
   {
     slug: "presentaciones-digitales",
     index: "05",
-    name: "Presentaciones digitales para negocios",
+    name: {
+      es: "Presentaciones digitales para negocios",
+      en: "Digital presentations for businesses",
+    },
     accent: "craft",
     visual: "qr-cards",
     featured: true,
@@ -910,7 +919,7 @@ export const projects: Project[] = [
   {
     slug: "hitdash",
     index: "06",
-    name: "Hitdash",
+    name: { es: "Hitdash", en: "Hitdash" },
     accent: "arcade",
     visual: "pixel-arena",
     featured: true,
@@ -1064,7 +1073,10 @@ export const projects: Project[] = [
   {
     slug: "entorno-ia-local",
     index: "07",
-    name: "Entorno local para inteligencia artificial",
+    name: {
+      es: "Entorno local para inteligencia artificial",
+      en: "Local artificial intelligence environment",
+    },
     accent: "terminal",
     visual: "local-core",
     featured: true,

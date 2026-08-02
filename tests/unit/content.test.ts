@@ -26,6 +26,7 @@ describe("projects", () => {
   it("provides both locales for every translated field", () => {
     for (const project of projects) {
       for (const locale of locales) {
+        expect(project.name[locale], `${project.slug}.name.${locale}`).toBeTruthy();
         expect(project.summary[locale], `${project.slug}.summary.${locale}`).toBeTruthy();
         expect(project.problem[locale], `${project.slug}.problem.${locale}`).toBeTruthy();
         expect(project.solution[locale], `${project.slug}.solution.${locale}`).toBeTruthy();
@@ -52,7 +53,7 @@ describe("projects", () => {
   });
 
   it("resolves a project by slug", () => {
-    expect(getProjectBySlug("vialai")?.name).toBe("VialAI");
+    expect(getProjectBySlug("vialai")?.name).toEqual({ es: "VialAI", en: "VialAI" });
     expect(getProjectBySlug("does-not-exist")).toBeUndefined();
   });
 

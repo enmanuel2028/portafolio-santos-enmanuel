@@ -64,7 +64,7 @@ export function buildPersonJsonLd(locale: Locale) {
 /** CreativeWork entries for the project catalogue. */
 export function buildProjectsJsonLd(
   locale: Locale,
-  entries: { slug: string; name: string; summary: L<string> }[],
+  entries: { slug: string; name: L<string>; summary: L<string> }[],
 ) {
   return {
     "@context": "https://schema.org",
@@ -74,7 +74,7 @@ export function buildProjectsJsonLd(
       position: position + 1,
       item: {
         "@type": "CreativeWork",
-        name: project.name,
+        name: project.name[locale],
         description: project.summary[locale],
         url: `${siteUrl}/${locale}/projects/${project.slug}`,
         author: { "@type": "Person", name: personal.fullName },

@@ -51,7 +51,7 @@ export interface Project extends ProjectLink {
   slug: string;
   /** Display index, e.g. "01". Derived positions stay stable if order changes. */
   index: string;
-  name: string;
+  name: L<string>;
   role: L<string>;
   year?: string;
   summary: L<string>;
