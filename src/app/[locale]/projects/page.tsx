@@ -80,6 +80,24 @@ export default async function ProjectsIndexPage({
                 </div>
 
                 <div className="flex flex-1 flex-col gap-3 p-6">
+                  {project.ownership || project.status ? (
+                    <div className="flex flex-wrap gap-2">
+                      {project.ownership ? (
+                        <Tag accent>
+                          {project.ownership === "own"
+                            ? dict.projects.ownProject
+                            : dict.projects.collaboration}
+                        </Tag>
+                      ) : null}
+                      {project.status ? (
+                        <Tag>
+                          {project.status === "ongoing"
+                            ? dict.projects.inProgress
+                            : dict.projects.completed}
+                        </Tag>
+                      ) : null}
+                    </div>
+                  ) : null}
                   <p className="mono-label">{project.role[locale]}</p>
 
                   <h2 className="font-[family-name:var(--font-display)] text-2xl transition-colors group-hover:text-[var(--accent)]">

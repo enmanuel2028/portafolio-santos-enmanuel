@@ -62,7 +62,9 @@ export function ExperienceProvider({ children }: { children: ReactNode }) {
     () => false,
   );
 
-  const motionEnabled = effectsEnabled && !prefersReducedMotion;
+  // This portfolio defaults to its full visual experience. Visitors can still
+  // disable it explicitly with the on-page effects toggle.
+  const motionEnabled = effectsEnabled;
   const tier: QualityTier = motionEnabled ? detectedTier : "low";
 
   // Expose state to CSS so decorative layers can opt out without JavaScript.

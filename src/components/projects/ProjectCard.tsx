@@ -68,12 +68,28 @@ export function ProjectCard({ project, locale, dict, reversed = false }: Project
           {project.index}
         </span>
 
-        {project.confidential ? (
-          <span className="absolute top-4 right-4 inline-flex items-center gap-1.5 rounded-full border border-[var(--color-line-strong)] bg-[var(--color-void)]/80 px-2.5 py-1 font-[family-name:var(--font-mono)] text-[0.6rem] tracking-wide text-[var(--color-muted)] uppercase">
-            <Lock className="h-3 w-3" aria-hidden="true" />
-            {dict.projects.confidential}
-          </span>
-        ) : null}
+        <span className="absolute top-4 right-4 flex flex-col items-end gap-1.5">
+          {project.ownership ? (
+            <span className="rounded-full border border-[var(--accent)]/35 bg-[var(--color-void)]/85 px-2.5 py-1 font-[family-name:var(--font-mono)] text-[0.6rem] tracking-wide text-[var(--accent)] uppercase">
+              {project.ownership === "own"
+                ? dict.projects.ownProject
+                : dict.projects.collaboration}
+            </span>
+          ) : null}
+          {project.status ? (
+            <span className="rounded-full border border-[var(--color-line-strong)] bg-[var(--color-void)]/85 px-2.5 py-1 font-[family-name:var(--font-mono)] text-[0.6rem] tracking-wide text-[var(--color-muted)] uppercase">
+              {project.status === "ongoing"
+                ? dict.projects.inProgress
+                : dict.projects.completed}
+            </span>
+          ) : null}
+          {project.confidential ? (
+            <span className="inline-flex items-center gap-1.5 rounded-full border border-[var(--color-line-strong)] bg-[var(--color-void)]/85 px-2.5 py-1 font-[family-name:var(--font-mono)] text-[0.6rem] tracking-wide text-[var(--color-muted)] uppercase">
+              <Lock className="h-3 w-3" aria-hidden="true" />
+              {dict.projects.confidential}
+            </span>
+          ) : null}
+        </span>
       </Link>
 
       {/* ── Content ─────────────────────────────────────────────────────── */}

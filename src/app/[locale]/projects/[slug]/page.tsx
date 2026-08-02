@@ -92,6 +92,20 @@ export default async function ProjectPage({
                   {dict.projects.confidential}
                 </span>
               ) : null}
+              {project.ownership ? (
+                <Tag accent>
+                  {project.ownership === "own"
+                    ? dict.projects.ownProject
+                    : dict.projects.collaboration}
+                </Tag>
+              ) : null}
+              {project.status ? (
+                <Tag>
+                  {project.status === "ongoing"
+                    ? dict.projects.inProgress
+                    : dict.projects.completed}
+                </Tag>
+              ) : null}
             </div>
 
             <h1 className="text-gradient max-w-4xl font-[family-name:var(--font-display)] text-4xl leading-[1.03] sm:text-6xl lg:text-7xl">
